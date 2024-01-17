@@ -3,6 +3,8 @@ from typing import DefaultDict, Dict, List, Optional, Union
 from dooit.utils.conf_reader import config_man
 from copy import deepcopy
 
+from dooit.utils.enums import Keybinds
+
 customed_keys = config_man.get("keybindings")
 
 
@@ -32,34 +34,34 @@ PRINTABLE = (
     + "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ "
 )
 DEFAULTS = {
-    "switch pane": "<tab>",
-    "move up": ["k", "<up>"],
-    "shift up": ["K", "<shift+up>"],
-    "move down": ["j", "<down>"],
-    "shift down": ["J", "<shift+down>"],
-    "edit description": "i",
-    "toggle expand": "z",
-    "toggle expand recursive": "<ctrl+z>",
-    "toggle expand parent": "Z",
-    "add child": "A",
-    "add sibling": "a",
-    "remove item": "x",
-    "move to top": ["g", "<home>"],
-    "move to bottom": ["G", "<end>"],
-    "sort menu toggle": "s",
-    "start search": "/",
-    "spawn help": "?",
-    "copy text": "Y",
-    "yank": "y",
-    "paste": "p",
-    "toggle complete": "c",
-    "edit due": "d",
-    "switch date style": "D",
-    "edit recurrence": "r",
-    "increase urgency": ["+", "="],
-    "decrease urgency": ["-", "_"],
-    "switch pane workspace": ["h"],
-    "switch pane todo": ["l"],
+    Keybinds.SWITCH_PANE: "<tab>",
+    Keybinds.MOVE_UP: ["k", "<up>"],
+    Keybinds.SHIFT_UP: ["K", "<shift+up>"],
+    Keybinds.MOVE_DOWN: ["j", "<down>"],
+    Keybinds.SHIFT_DOWN: ["J", "<shift+down>"],
+    Keybinds.EDIT_DESCRIPTION: "i",
+    Keybinds.TOGGLE_EXPAND: "z",
+    Keybinds.TOGGLE_EXPAND_RECURSIVE: "<ctrl+z>",
+    Keybinds.TOGGLE_EXPAND_PARENT: "Z",
+    Keybinds.ADD_CHILD: "A",
+    Keybinds.ADD_SIBLING: "a",
+    Keybinds.REMOVE_ITEM: "x",
+    Keybinds.MOVE_TO_TOP: ["g", "<home>"],
+    Keybinds.MOVE_TO_BOTTOM: ["G", "<end>"],
+    Keybinds.SORT_MENU_TOGGLE: "s",
+    Keybinds.START_SEARCH: "/",
+    Keybinds.SPAWN_HELP: "?",
+    Keybinds.COPY_TEXT: "Y",
+    Keybinds.YANK: "y",
+    Keybinds.PASTE: "p",
+    Keybinds.TOGGLE_COMPLETE: "c",
+    Keybinds.EDIT_DUE: "d",
+    Keybinds.SWITCH_DATE_STYLE: "D",
+    Keybinds.EDIT_RECURRENCE: "r",
+    Keybinds.INCREASE_URGENCY: ["+", "="],
+    Keybinds.DECREASE_URGENCY: ["-", "_"],
+    Keybinds.SWITCH_PANE_WORKSPACE: ["h"],
+    Keybinds.SWITCH_PANE_TODO: ["l"],
 }
 
 configured_keys = deepcopy(DEFAULTS)

@@ -4,6 +4,8 @@ from rich.console import Group, RenderableType
 from rich.style import Style, StyleType
 from rich.table import Table
 from rich.text import Text
+
+from dooit.utils.enums import Keybinds
 from dooit.utils.keybinder import KeyBinder
 
 
@@ -90,34 +92,34 @@ separator = Text.from_markup(f"{colored('─' * 60, 'b d black')}", justify="cen
 # KEYBINDINGS
 # --------------------------------------------
 NORMAL_KB = {
-    "move down": "Move down in list",
-    "shift down": "Shift todo down in list",
-    "move up": "Move up in list",
-    "shift up": "Shift todo up in list",
-    "toggle complete": "Toggle todo status as complete/incomplete**",
-    "copy text": "Copy (todo/workspace)'s text",
-    "yank": "Copy a whole todo/workspace",
-    "paste": "Paste the yanked todo/workspace",
-    "move to top": "Move to top of list",
-    "move to bottom": "Move to bottom of list",
-    "toggle expand": "Toggle-expand highlighted item",
-    "toggle expand recursive": "Toggle-expand highlighted item and all it's children",
-    "toggle expand parent": "Toggle-expand parent item",
-    "remove item": "Remove highlighted node",
-    "add sibling": "Add sibling todo/workspace",
-    "add child": "Add child todo/workspace",
-    "sort menu toggle": "Launch sort menu",
-    "start search": "Start Search Mode",
-    "switch pane": "Toggle focused pane",
-    "switch pane workspace": "Change focus to workspace",
-    "switch pane todo": "Change focus to todo",
-    "edit due": "Edit date**",
-    "edit description": "Edit description**",
-    "edit effort": "Edit effort for todo**",
-    "edit recurrence": "Edit recurrence for todo**",
-    "increase urgency": "Increase urgency**",
-    "decrease urgency": "Decrease urgency**",
-    "switch date style": "switch due from date or time remaining ",
+    Keybinds.MOVE_DOWN: "Move down in list",
+    Keybinds.SHIFT_DOWN: "Shift todo down in list",
+    Keybinds.MOVE_UP: "Move up in list",
+    Keybinds.SHIFT_UP: "Shift todo up in list",
+    Keybinds.TOGGLE_COMPLETE: "Toggle todo status as complete/incomplete**",
+    Keybinds.COPY_TEXT: "Copy (todo/workspace)'s text",
+    Keybinds.YANK: "Copy a whole todo/workspace",
+    Keybinds.PASTE: "Paste the yanked todo/workspace",
+    Keybinds.MOVE_TO_TOP: "Move to top of list",
+    Keybinds.MOVE_TO_BOTTOM: "Move to bottom of list",
+    Keybinds.TOGGLE_EXPAND: "Toggle-expand highlighted item",
+    Keybinds.TOGGLE_EXPAND_RECURSIVE: "Toggle-expand highlighted item and all it's children",
+    Keybinds.TOGGLE_EXPAND_PARENT: "Toggle-expand parent item",
+    Keybinds.REMOVE_ITEM: "Remove highlighted node",
+    Keybinds.ADD_SIBLING: "Add sibling todo/workspace",
+    Keybinds.ADD_CHILD: "Add child todo/workspace",
+    Keybinds.SORT_MENU_TOGGLE: "Launch sort menu",
+    Keybinds.START_SEARCH: "Start Search Mode",
+    Keybinds.SWITCH_PANE: "Toggle focused pane",
+    Keybinds.SWITCH_PANE_WORKSPACE: "Change focus to workspace",
+    Keybinds.SWITCH_PANE_TODO: "Change focus to todo",
+    Keybinds.EDIT_DUE: "Edit date**",
+    Keybinds.EDIT_DESCRIPTION: "Edit description**",
+    Keybinds.EDIT_EFFORT: "Edit effort for todo**",
+    Keybinds.EDIT_RECURRENCE: "Edit recurrence for todo**",
+    Keybinds.SWITCH_DATE_STYLE: "Increase urgency**",
+    Keybinds.INCREASE_URGENCY: "Decrease urgency**",
+    Keybinds.DECREASE_URGENCY: "switch due from date or time remaining ",
 }
 
 NORMAL_NB = [
